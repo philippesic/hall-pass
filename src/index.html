@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="location">Error</p>
+    <button id="toggleButton">⏸️</button>
+    <span id="timer" style="display: none">0 seconds</span>
+
+    <script>
+      let timerInterval;
+      let isRunning = false;
+      const toggleButton = document.getElementById("toggleButton");
+      const timerElement = document.getElementById("timer");
+
+      toggleButton.addEventListener("click", function () {
+        if (isRunning) {
+          // Stop the timer
+          clearInterval(timerInterval);
+          isRunning = false;
+
+          // Change the symbol back to play
+          toggleButton.textContent = "▶️";
+
+          // Hide the timer
+          timerElement.style.display = "none";
+        } else {
+          // Start the timer
+          let seconds = 0;
+          timerInterval = setInterval(function () {
+            seconds++;
+            timerElement.textContent = `${seconds} second${
+              seconds !== 1 ? "s" : ""
+            }`;
+          }, 1000);
+          isRunning = true;
+
+          // Change the symbol to pause
+          toggleButton.textContent = "⏸️";
+
+          // Show the timer
+          timerElement.style.display = "inline";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script type="module" src="./firebase.mjs"></script>
+  <script type="module" src="./login.mjs"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="signupSection" style="display: none">
+      <h2>Sign-Up</h2>
+      <label for="signupEmail">Email:</label>
+      <input
+        type="text"
+        id="signupEmail"
+        placeholder="Enter your email"
+      /><br /><br />
+
+      <label for="signupPassword">Password:</label>
+      <input
+        type="password"
+        id="signupPassword"
+        placeholder="Enter your password"
+      /><br /><br />
+
+      <button onclick="signUp()">Sign-Up</button>
+    </div>
+
+    <div id="loginSection">
+      <h2>Login</h2>
+      <label for="loginEmail">Email:</label>
+      <input
+        type="text"
+        id="loginEmail"
+        placeholder="Enter your email"
+      /><br /><br />
+
+      <label for="loginPassword">Password:</label>
+      <input
+        type="password"
+        id="loginPassword"
+        placeholder="Enter your password"
+      /><br /><br />
+
+      <button onclick="login()">Login</button>
+    </div>
+
+    <button onclick="toggleSections()">Toggle</button>
+  </body>
+</html>
