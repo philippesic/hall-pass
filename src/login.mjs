@@ -2,7 +2,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-} from "../node_modules/@firebase/auth";
+} from "../node_modules/@firebase/auth/dist/auth-public.d.ts";
 
 const signupSection = document.getElementById("signupSection");
 const loginSection = document.getElementById("loginSection");

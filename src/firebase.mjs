@@ -1,7 +1,11 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "../node_modules/@firebase/app";
-import { getAnalytics } from "../node_modules/@firebase/analytics";
-import { getDatabase, ref, set } from "../node_modules/@firebase/database";
+import { initializeApp } from "../node_modules/@firebase/app/dist/app-public.d.ts";
+import { getAnalytics } from "../node_modules/@firebase/analytics/dist/analytics-public.d.ts";
+import {
+  getDatabase,
+  ref,
+  set,
+} from "../node_modules/@firebase/database/dist/internal.d.ts";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
